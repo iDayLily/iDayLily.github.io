@@ -1,4 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
+  <url>
+    <loc>http://blog.iDayLily.me/commonweal/index.html</loc>
+    
+    <lastmod>2016-05-20T09:49:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.iDayLily.me/about/index.html</loc>
+    
+    <lastmod>2016-05-20T09:48:45.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.iDayLily.me/tags/index.html</loc>
+    
+    <lastmod>2016-05-20T09:48:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.iDayLily.me/categories/index.html</loc>
+    
+    <lastmod>2016-05-20T09:45:45.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.iDayLily.me/2016/05/20/hello-world/</loc>
+    
+    <lastmod>2016-05-20T09:16:22.000Z</lastmod>
+    
+  </url>
+  
 </urlset>
