@@ -277,7 +277,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-21T01:19:45+08:00" content="2016-05-21">
+            <time itemprop="dateCreated" datetime="2016-05-21T01:27:33+08:00" content="2016-05-21">
               2016-05-21
             </time>
           </span>
@@ -333,9 +333,14 @@
       
         
           <p>记录一下部署hexo＋github所遇到的问题</p>
-<h2 id="Process-failed-layout-DS-Store"><a href="#Process-failed-layout-DS-Store" class="headerlink" title="# Process failed: layout/.DS_Store"></a># Process failed: layout/.DS_Store</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf .DS_Store</span><br></pre></td></tr></table></figure>
-<h3 id="设置博客访问地址为xxx-xxx-xx"><a href="#设置博客访问地址为xxx-xxx-xx" class="headerlink" title="# 设置博客访问地址为xxx.xxx.xx"></a># 设置博客访问地址为xxx.xxx.xx</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">想要设置成blog.xxx.xx为访问地址。在CNAME文件中的域名为blog.xxx.xx，然后在在DNS解析的地方，（以dnspod为例）设置一下CNAME转发，主机纪录为blog，记录类型为CNAME，记录值为usename.github.io。</span><br></pre></td></tr></table></figure>
-<h3 id="博客预览没有任何内容，也就是白板"><a href="#博客预览没有任何内容，也就是白板" class="headerlink" title="# 博客预览没有任何内容，也就是白板"></a># 博客预览没有任何内容，也就是白板</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">### # hexo init 时提示缺少dependency</span><br><span class="line"></span><br><span class="line">```执行一下 npm install</span><br></pre></td></tr></table></figure>
+<h2 id="Process-failed-layout-DS-Store"><a href="#Process-failed-layout-DS-Store" class="headerlink" title="# Process failed: layout/.DS_Store"></a># Process failed: layout/.DS_Store</h2><hr>
+<p>进入主题目录layout等相应目录下执行<br>rm -rf .DS_Store</p>
+<h3 id="设置博客访问地址为xxx-xxx-xx"><a href="#设置博客访问地址为xxx-xxx-xx" class="headerlink" title="# 设置博客访问地址为xxx.xxx.xx"></a># 设置博客访问地址为xxx.xxx.xx</h3><hr>
+<p>如果不想设置博客访问地址为www.xxx.xx或者xxx.xx,<br>想要设置成blog.xxx.xx为访问地址。在CNAME文件中的域名为blog.xxx.xx，然后在在DNS解析的地方，（以dnspod为例）设置一下CNAME转发，主机纪录为blog，记录类型为CNAME，记录值为usename.github.io。</p>
+<h3 id="博客预览没有任何内容，也就是白板"><a href="#博客预览没有任何内容，也就是白板" class="headerlink" title="# 博客预览没有任何内容，也就是白板"></a># 博客预览没有任何内容，也就是白板</h3><hr>
+<p>可能是主题的目录不在站点目录下的theme的文件夹内</p>
+<h3 id="hexo-init-时提示缺少dependency"><a href="#hexo-init-时提示缺少dependency" class="headerlink" title="# hexo init 时提示缺少dependency"></a># hexo init 时提示缺少dependency</h3><hr>
+<p>执行一下 npm install</p>
 <p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/05/21/hexo+github记录/#more" rel="contents">
