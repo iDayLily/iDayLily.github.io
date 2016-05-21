@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>iDayLily&#39;s Blog</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://blog.iDayLily.me/"/>
+  <updated>2016-05-20T17:29:35.000Z</updated>
+  <id>http://blog.iDayLily.me/</id>
+  
+  <author>
+    <name>iDayLily</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>部署hexo+github</title>
+    <link href="http://blog.iDayLily.me/2016/05/21/hexo+github%E8%AE%B0%E5%BD%95/"/>
+    <id>http://blog.iDayLily.me/2016/05/21/hexo+github记录/</id>
+    <published>2016-05-21T01:27:13.705Z</published>
+    <updated>2016-05-20T17:29:35.000Z</updated>
+    
+    <content type="html">&lt;p&gt;记录一下部署hexo＋github所遇到的问题&lt;/p&gt;
+&lt;h2 id=&quot;Process-failed-layout-DS-Store&quot;&gt;&lt;a href=&quot;#Process-failed-layout-DS-Store&quot; class=&quot;headerlink&quot; title=&quot;# Process failed: layout/.DS_Store&quot;&gt;&lt;/a&gt;# Process failed: layout/.DS_Store&lt;/h2&gt;&lt;p&gt;  进入主题目录layout等相应目录下执行&lt;br&gt;rm -rf .DS_Store&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;设置博客访问地址为xxx-xxx-xx&quot;&gt;&lt;a href=&quot;#设置博客访问地址为xxx-xxx-xx&quot; class=&quot;headerlink&quot; title=&quot;# 设置博客访问地址为xxx.xxx.xx&quot;&gt;&lt;/a&gt;# 设置博客访问地址为xxx.xxx.xx&lt;/h3&gt;&lt;p&gt;  如果不想设置博客访问地址为www.xxx.xx或者xxx.xx,&lt;br&gt;想要设置成blog.xxx.xx为访问地址。在CNAME文件中的域名为blog.xxx.xx，然后在在DNS解析的地方，（以dnspod为例）设置一下CNAME转发，主机纪录为blog，记录类型为CNAME，记录值为usename.github.io。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;博客预览没有任何内容，也就是白板&quot;&gt;&lt;a href=&quot;#博客预览没有任何内容，也就是白板&quot; class=&quot;headerlink&quot; title=&quot;# 博客预览没有任何内容，也就是白板&quot;&gt;&lt;/a&gt;# 博客预览没有任何内容，也就是白板&lt;/h3&gt;&lt;p&gt;  可能是主题的目录不在站点目录下的theme的文件夹内&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;hexo-init-时提示缺少dependency&quot;&gt;&lt;a href=&quot;#hexo-init-时提示缺少dependency&quot; class=&quot;headerlink&quot; title=&quot;# hexo init 时提示缺少dependency&quot;&gt;&lt;/a&gt;# hexo init 时提示缺少dependency&lt;/h3&gt;&lt;p&gt;执行一下 npm install&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&amp;gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录一下部署hexo＋github所遇到的问题&lt;/p&gt;
+&lt;h2 id=&quot;Process-failed-layout-DS-Store&quot;&gt;&lt;a href=&quot;#Process-failed-layout-DS-Store&quot; class=&quot;headerlink&quot; title=&quot;# Process failed: layout/.DS_Store&quot;&gt;&lt;/a&gt;# Process failed: layout/.DS_Store&lt;/h2&gt;&lt;p&gt;  进入主题目录layout等相应目录下执行&lt;br&gt;rm -rf .DS_Store&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;设置博客访问地址为xxx-xxx-xx&quot;&gt;&lt;a href=&quot;#设置博客访问地址为xxx-xxx-xx&quot; class=&quot;headerlink&quot; title=&quot;# 设置博客访问地址为xxx.xxx.xx&quot;&gt;&lt;/a&gt;# 设置博客访问地址为xxx.xxx.xx&lt;/h3&gt;&lt;p&gt;  如果不想设置博客访问地址为www.xxx.xx或者xxx.xx,&lt;br&gt;想要设置成blog.xxx.xx为访问地址。在CNAME文件中的域名为blog.xxx.xx，然后在在DNS解析的地方，（以dnspod为例）设置一下CNAME转发，主机纪录为blog，记录类型为CNAME，记录值为usename.github.io。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;博客预览没有任何内容，也就是白板&quot;&gt;&lt;a href=&quot;#博客预览没有任何内容，也就是白板&quot; class=&quot;headerlink&quot; title=&quot;# 博客预览没有任何内容，也就是白板&quot;&gt;&lt;/a&gt;# 博客预览没有任何内容，也就是白板&lt;/h3&gt;&lt;p&gt;  可能是主题的目录不在站点目录下的theme的文件夹内&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;hexo-init-时提示缺少dependency&quot;&gt;&lt;a href=&quot;#hexo-init-时提示缺少dependency&quot; class=&quot;headerlink&quot; title=&quot;# hexo init 时提示缺少dependency&quot;&gt;&lt;/a&gt;# hexo init 时提示缺少dependency&lt;/h3&gt;&lt;p&gt;执行一下 npm install&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://blog.iDayLily.me/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://blog.iDayLily.me/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>
