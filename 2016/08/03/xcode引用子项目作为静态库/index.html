@@ -103,7 +103,7 @@
 <meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.09.58.png">
 <meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.23.28.png">
 <meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.38.33.png">
-<meta property="og:updated_time" content="2016-08-03T14:57:09.000Z">
+<meta property="og:updated_time" content="2016-08-03T15:54:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Xcode引用子项目作为静态库">
 <meta name="twitter:description" content="在项目中引用另外一个项目做依赖">
@@ -346,10 +346,9 @@
 <p><img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.09.58.png" alt=""></p>
 <h2 id="6-配置SuperProject"><a href="#6-配置SuperProject" class="headerlink" title="6.配置SuperProject"></a>6.配置SuperProject</h2><p>1.选中SuperProject的Build Phases，选择Link Binary With Libraries点击➕，选中libSubProject.a</p>
 <p><img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.23.28.png" alt=""></p>
-<p>2.在SuperProject的targetbuild settings 里面找到 Other Linker Flags，添加-ObjC和 -all_load。</p>
+<p>2.在SuperProject的targetbuild settings 里面找到 Other Linker Flags，添加-ObjC和 -all_load。注：有的时候需要加上-lstdc++</p>
 <p>3.配置静态库的头文件。在SuperProject的targetbuild settings，找到Header Search Paths,添加”$(TARGET_BUILD_DIR)/usr/local/lib/include”和”$(OBJROOT)/UninstalledProducts/include”。第一个的意思是在build的时候会把头文件引用，第二个是在Archive项目时才去找的目录。</p>
 <p><img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.38.33.png" alt=""></p>
-<p>4.在SuperProject的targetbuild settings 里面找到”Always search user paths” 设置成YES。</p>
 
       
     </div>
