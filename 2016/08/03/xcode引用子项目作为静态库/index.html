@@ -94,8 +94,8 @@
 <meta property="og:description" content="在项目中引用另外一个项目做依赖">
 <meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2016.48.19.png">
 <meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2016.49.32.png">
-<meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2016.49.32.png">
-<meta property="og:updated_time" content="2016-08-03T11:06:11.000Z">
+<meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2018.57.50.png">
+<meta property="og:updated_time" content="2016-08-03T11:07:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="xcode引用子项目作为静态库">
 <meta name="twitter:description" content="在项目中引用另外一个项目做依赖">
@@ -315,7 +315,7 @@
 
       
         <h2 id="1-用xcode创建一个静态库"><a href="#1-用xcode创建一个静态库" class="headerlink" title="1.用xcode创建一个静态库"></a>1.用xcode创建一个静态库</h2><p> 这个很简单,command＋n， 看下面的图<br> <img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2016.48.19.png" alt=""><br> 然后创建一个静态库<br> <img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2016.49.32.png" alt=""><br> 我们给SubProject这个申明一个属性name，然后给它一个初始值。</p>
-<h2 id="2-配置静态库的target"><a href="#2-配置静态库的target" class="headerlink" title="2.配置静态库的target"></a>2.配置静态库的target</h2><p> 选择项目的target,build Settings -&gt; Public Header Folder Path<br> <img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2016.49.32.png" alt=""><br> 把”/usr/local/include”改成”include/$(TARGET_NAME”。<br> 为什么要这样改呢？</p>
+<h2 id="2-配置静态库的target"><a href="#2-配置静态库的target" class="headerlink" title="2.配置静态库的target"></a>2.配置静态库的target</h2><p> 选择项目的target,build Settings -&gt; Public Header Folder Path<br> <img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2018.57.50.png" alt=""><br> 把”/usr/local/include”改成”include/$(TARGET_NAME”。<br> 为什么要这样改呢？</p>
 
       
     </div>
