@@ -88,16 +88,24 @@
 
 <meta name="description" content="在项目中引用另外一个项目做依赖">
 <meta property="og:type" content="article">
-<meta property="og:title" content="xcode引用子项目作为静态库">
+<meta property="og:title" content="Xcode引用子项目作为静态库">
 <meta property="og:url" content="http://blog.iDayLily.me/2016/08/03/xcode引用子项目作为静态库/index.html">
 <meta property="og:site_name" content="iDayLily's Blog">
 <meta property="og:description" content="在项目中引用另外一个项目做依赖">
 <meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2016.48.19.png">
 <meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2016.49.32.png">
 <meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2018.57.50.png">
-<meta property="og:updated_time" content="2016-08-03T11:12:32.000Z">
+<meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2021.34.19.png">
+<meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2021.54.59.png">
+<meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2021.56.58.png">
+<meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2021.57.42.png">
+<meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.00.13.png">
+<meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.09.58.png">
+<meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.23.28.png">
+<meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.38.33.png">
+<meta property="og:updated_time" content="2016-08-03T14:57:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xcode引用子项目作为静态库">
+<meta name="twitter:title" content="Xcode引用子项目作为静态库">
 <meta name="twitter:description" content="在项目中引用另外一个项目做依赖">
 <meta name="twitter:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2016.48.19.png">
 
@@ -117,7 +125,7 @@
   };
 </script>
 
-  <title> xcode引用子项目作为静态库 | iDayLily's Blog </title>
+  <title> Xcode引用子项目作为静态库 | iDayLily's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -267,7 +275,7 @@
             
             
               
-                xcode引用子项目作为静态库
+                Xcode引用子项目作为静态库
               
             
           </h1>
@@ -314,8 +322,34 @@
       
 
       
-        <h2 id="1-创建一个静态库"><a href="#1-创建一个静态库" class="headerlink" title="1.创建一个静态库"></a>1.创建一个静态库</h2><p> 这个很简单,command＋n， 看下面的图<br> <img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2016.48.19.png" alt=""><br> 然后创建一个静态库<br> <img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2016.49.32.png" alt=""><br> 我们给SubProject这个申明一个属性name，然后给它一个初始值。</p>
-<h2 id="2-配置静态库的target"><a href="#2-配置静态库的target" class="headerlink" title="2.配置静态库的target"></a>2.配置静态库的target</h2><p> 选择项目的target,build Settings -&gt; Public Header Folder Path<br> <img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2018.57.50.png" alt=""><br> 把”/usr/local/include”改成”include/$(TARGET_NAME”。<br> 为什么要这样改呢？</p>
+        <h2 id="1-创建一个静态库"><a href="#1-创建一个静态库" class="headerlink" title="1.创建一个静态库"></a>1.创建一个静态库</h2><p> 这个很简单,command＋n， 看下面的图</p>
+<p> <img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2016.48.19.png" alt=""></p>
+<p> 然后创建一个静态库</p>
+<p> <img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2016.49.32.png" alt=""></p>
+<p> 我们给SubProject这个申明一个属性name，然后给它一个初始值。</p>
+<h2 id="2-配置静态库的target"><a href="#2-配置静态库的target" class="headerlink" title="2.配置静态库的target"></a>2.配置静态库的target</h2><p> 选择项目的target,build Settings -&gt; Public Header Folder Path</p>
+<p> <img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2018.57.50.png" alt=""></p>
+<p> 把”/usr/local/include”改成”include/$(TARGET_NAME”。</p>
+<h2 id="3-为静态库创建一个全局的头文件"><a href="#3-为静态库创建一个全局的头文件" class="headerlink" title="3.为静态库创建一个全局的头文件"></a>3.为静态库创建一个全局的头文件</h2><p> commond+n,创建.h文件，命名为SubProjectHeader，对于比较简单的静态库来说，帮助不是很大，但是对于比较复杂的项目是非常有用的。</p>
+<p> <img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2021.34.19.png" alt=""></p>
+<h2 id="4-设置头文件的权限"><a href="#4-设置头文件的权限" class="headerlink" title="4.设置头文件的权限"></a>4.设置头文件的权限</h2><p> 关于头文件的权限，总共有三个：Pulic、Priate、project。</p>
+<p>选中SubProjectHeader.h文件，在右边有一个”Target Membership”。</p>
+<p><img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2021.54.59.png" alt=""></p>
+<p>会发现没有地方去选择或者更改文件权限。选中target，build Phases。</p>
+<p><img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2021.56.58.png" alt=""></p>
+<p>点击➕，选择New Header Phases。</p>
+<p><img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2021.57.42.png" alt=""></p>
+<p>然后回到SubProjectHeader.h的Target Membership，选择public。</p>
+<p><img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.00.13.png" alt=""></p>
+<p>如果SubProject.h也需要在项目中用到，同理。</p>
+<h2 id="5-开始使用这个静态库"><a href="#5-开始使用这个静态库" class="headerlink" title="5.开始使用这个静态库"></a>5.开始使用这个静态库</h2><p>我创建一个SuperProject项目，将SubProject.xcodeproj拖进去。当然你也可以从git或者svn将静态库pull下来。</p>
+<p><img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.09.58.png" alt=""></p>
+<h2 id="6-配置SuperProject"><a href="#6-配置SuperProject" class="headerlink" title="6.配置SuperProject"></a>6.配置SuperProject</h2><p>1.选中SuperProject的Build Phases，选择Link Binary With Libraries点击➕，选中libSubProject.a</p>
+<p><img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.23.28.png" alt=""></p>
+<p>2.在SuperProject的targetbuild settings 里面找到 Other Linker Flags，添加-ObjC和 -all_load。</p>
+<p>3.配置静态库的头文件。在SuperProject的targetbuild settings，找到Header Search Paths,添加”$(TARGET_BUILD_DIR)/usr/local/lib/include”和”$(OBJROOT)/UninstalledProducts/include”。第一个的意思是在build的时候会把头文件引用，第二个是在Archive项目时才去找的目录。</p>
+<p><img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.38.33.png" alt=""></p>
+<p>4.在SuperProject的targetbuild settings 里面找到”Always search user paths” 设置成YES。</p>
 
       
     </div>
@@ -379,7 +413,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/08/03/xcode引用子项目作为静态库/"
-           data-title="xcode引用子项目作为静态库" data-url="http://blog.iDayLily.me/2016/08/03/xcode引用子项目作为静态库/">
+           data-title="Xcode引用子项目作为静态库" data-url="http://blog.iDayLily.me/2016/08/03/xcode引用子项目作为静态库/">
       </div>
     
   </div>
@@ -477,7 +511,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-创建一个静态库"><span class="nav-number">1.</span> <span class="nav-text">1.创建一个静态库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-配置静态库的target"><span class="nav-number">2.</span> <span class="nav-text">2.配置静态库的target</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-创建一个静态库"><span class="nav-number">1.</span> <span class="nav-text">1.创建一个静态库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-配置静态库的target"><span class="nav-number">2.</span> <span class="nav-text">2.配置静态库的target</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-为静态库创建一个全局的头文件"><span class="nav-number">3.</span> <span class="nav-text">3.为静态库创建一个全局的头文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-设置头文件的权限"><span class="nav-number">4.</span> <span class="nav-text">4.设置头文件的权限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-开始使用这个静态库"><span class="nav-number">5.</span> <span class="nav-text">5.开始使用这个静态库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-配置SuperProject"><span class="nav-number">6.</span> <span class="nav-text">6.配置SuperProject</span></a></li></ol></div>
             
           </div>
         </section>

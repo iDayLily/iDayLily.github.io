@@ -19,7 +19,7 @@
     <title>部署hexo+github</title>
     <link href="http://blog.iDayLily.me/2016/08/03/hexo+github%E8%AE%B0%E5%BD%95/"/>
     <id>http://blog.iDayLily.me/2016/08/03/hexo+github记录/</id>
-    <published>2016-08-03T11:12:37.122Z</published>
+    <published>2016-08-03T15:22:56.925Z</published>
     <updated>2016-05-20T17:29:35.000Z</updated>
     
     <content type="html">&lt;p&gt;记录一下部署hexo＋github所遇到的问题&lt;/p&gt;
@@ -57,14 +57,40 @@
   </entry>
   
   <entry>
-    <title>xcode引用子项目作为静态库</title>
+    <title>Xcode引用子项目作为静态库</title>
     <link href="http://blog.iDayLily.me/2016/08/03/xcode%E5%BC%95%E7%94%A8%E5%AD%90%E9%A1%B9%E7%9B%AE%E4%BD%9C%E4%B8%BA%E9%9D%99%E6%80%81%E5%BA%93/"/>
     <id>http://blog.iDayLily.me/2016/08/03/xcode引用子项目作为静态库/</id>
     <published>2016-08-03T08:40:10.000Z</published>
-    <updated>2016-08-03T11:12:32.000Z</updated>
+    <updated>2016-08-03T14:57:09.000Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;1-创建一个静态库&quot;&gt;&lt;a href=&quot;#1-创建一个静态库&quot; class=&quot;headerlink&quot; title=&quot;1.创建一个静态库&quot;&gt;&lt;/a&gt;1.创建一个静态库&lt;/h2&gt;&lt;p&gt; 这个很简单,command＋n， 看下面的图&lt;br&gt; &lt;img src=&quot;http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2016.48.19.png&quot; alt=&quot;&quot;&gt;&lt;br&gt; 然后创建一个静态库&lt;br&gt; &lt;img src=&quot;http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2016.49.32.png&quot; alt=&quot;&quot;&gt;&lt;br&gt; 我们给SubProject这个申明一个属性name，然后给它一个初始值。&lt;/p&gt;
-&lt;h2 id=&quot;2-配置静态库的target&quot;&gt;&lt;a href=&quot;#2-配置静态库的target&quot; class=&quot;headerlink&quot; title=&quot;2.配置静态库的target&quot;&gt;&lt;/a&gt;2.配置静态库的target&lt;/h2&gt;&lt;p&gt; 选择项目的target,build Settings -&amp;gt; Public Header Folder Path&lt;br&gt; &lt;img src=&quot;http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2018.57.50.png&quot; alt=&quot;&quot;&gt;&lt;br&gt; 把”/usr/local/include”改成”include/$(TARGET_NAME”。&lt;br&gt; 为什么要这样改呢？&lt;/p&gt;
+    <content type="html">&lt;h2 id=&quot;1-创建一个静态库&quot;&gt;&lt;a href=&quot;#1-创建一个静态库&quot; class=&quot;headerlink&quot; title=&quot;1.创建一个静态库&quot;&gt;&lt;/a&gt;1.创建一个静态库&lt;/h2&gt;&lt;p&gt; 这个很简单,command＋n， 看下面的图&lt;/p&gt;
+&lt;p&gt; &lt;img src=&quot;http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2016.48.19.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt; 然后创建一个静态库&lt;/p&gt;
+&lt;p&gt; &lt;img src=&quot;http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2016.49.32.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt; 我们给SubProject这个申明一个属性name，然后给它一个初始值。&lt;/p&gt;
+&lt;h2 id=&quot;2-配置静态库的target&quot;&gt;&lt;a href=&quot;#2-配置静态库的target&quot; class=&quot;headerlink&quot; title=&quot;2.配置静态库的target&quot;&gt;&lt;/a&gt;2.配置静态库的target&lt;/h2&gt;&lt;p&gt; 选择项目的target,build Settings -&amp;gt; Public Header Folder Path&lt;/p&gt;
+&lt;p&gt; &lt;img src=&quot;http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2018.57.50.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt; 把”/usr/local/include”改成”include/$(TARGET_NAME”。&lt;/p&gt;
+&lt;h2 id=&quot;3-为静态库创建一个全局的头文件&quot;&gt;&lt;a href=&quot;#3-为静态库创建一个全局的头文件&quot; class=&quot;headerlink&quot; title=&quot;3.为静态库创建一个全局的头文件&quot;&gt;&lt;/a&gt;3.为静态库创建一个全局的头文件&lt;/h2&gt;&lt;p&gt; commond+n,创建.h文件，命名为SubProjectHeader，对于比较简单的静态库来说，帮助不是很大，但是对于比较复杂的项目是非常有用的。&lt;/p&gt;
+&lt;p&gt; &lt;img src=&quot;http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2021.34.19.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;4-设置头文件的权限&quot;&gt;&lt;a href=&quot;#4-设置头文件的权限&quot; class=&quot;headerlink&quot; title=&quot;4.设置头文件的权限&quot;&gt;&lt;/a&gt;4.设置头文件的权限&lt;/h2&gt;&lt;p&gt; 关于头文件的权限，总共有三个：Pulic、Priate、project。&lt;/p&gt;
+&lt;p&gt;选中SubProjectHeader.h文件，在右边有一个”Target Membership”。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2021.54.59.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;会发现没有地方去选择或者更改文件权限。选中target，build Phases。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2021.56.58.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;点击➕，选择New Header Phases。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2021.57.42.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;然后回到SubProjectHeader.h的Target Membership，选择public。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.00.13.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;如果SubProject.h也需要在项目中用到，同理。&lt;/p&gt;
+&lt;h2 id=&quot;5-开始使用这个静态库&quot;&gt;&lt;a href=&quot;#5-开始使用这个静态库&quot; class=&quot;headerlink&quot; title=&quot;5.开始使用这个静态库&quot;&gt;&lt;/a&gt;5.开始使用这个静态库&lt;/h2&gt;&lt;p&gt;我创建一个SuperProject项目，将SubProject.xcodeproj拖进去。当然你也可以从git或者svn将静态库pull下来。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.09.58.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;6-配置SuperProject&quot;&gt;&lt;a href=&quot;#6-配置SuperProject&quot; class=&quot;headerlink&quot; title=&quot;6.配置SuperProject&quot;&gt;&lt;/a&gt;6.配置SuperProject&lt;/h2&gt;&lt;p&gt;1.选中SuperProject的Build Phases，选择Link Binary With Libraries点击➕，选中libSubProject.a&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.23.28.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;2.在SuperProject的targetbuild settings 里面找到 Other Linker Flags，添加-ObjC和 -all_load。&lt;/p&gt;
+&lt;p&gt;3.配置静态库的头文件。在SuperProject的targetbuild settings，找到Header Search Paths,添加”$(TARGET_BUILD_DIR)/usr/local/lib/include”和”$(OBJROOT)/UninstalledProducts/include”。第一个的意思是在build的时候会把头文件引用，第二个是在Archive项目时才去找的目录。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.38.33.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;4.在SuperProject的targetbuild settings 里面找到”Always search user paths” 设置成YES。&lt;/p&gt;
 </content>
     
     <summary type="html">
