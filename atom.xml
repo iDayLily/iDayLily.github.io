@@ -19,7 +19,7 @@
     <title>部署hexo+github</title>
     <link href="http://blog.iDayLily.me/2016/08/04/hexo+github%E8%AE%B0%E5%BD%95/"/>
     <id>http://blog.iDayLily.me/2016/08/04/hexo+github记录/</id>
-    <published>2016-08-03T16:34:51.461Z</published>
+    <published>2016-08-03T16:36:41.229Z</published>
     <updated>2016-05-20T17:29:35.000Z</updated>
     
     <content type="html">&lt;p&gt;记录一下部署hexo＋github所遇到的问题&lt;/p&gt;
@@ -61,7 +61,7 @@
     <link href="http://blog.iDayLily.me/2016/08/03/xcode%E5%BC%95%E7%94%A8%E5%AD%90%E9%A1%B9%E7%9B%AE%E4%BD%9C%E4%B8%BA%E9%9D%99%E6%80%81%E5%BA%93/"/>
     <id>http://blog.iDayLily.me/2016/08/03/xcode引用子项目作为静态库/</id>
     <published>2016-08-03T08:40:10.000Z</published>
-    <updated>2016-08-03T16:34:11.000Z</updated>
+    <updated>2016-08-03T16:36:37.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;1-创建一个静态库&quot;&gt;&lt;a href=&quot;#1-创建一个静态库&quot; class=&quot;headerlink&quot; title=&quot;1.创建一个静态库&quot;&gt;&lt;/a&gt;1.创建一个静态库&lt;/h2&gt;&lt;p&gt; 这个很简单,command＋n， 看下面的图&lt;/p&gt;
 &lt;p&gt; &lt;img src=&quot;http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2016.48.19.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
@@ -90,8 +90,8 @@
 &lt;p&gt;2.在SuperProject的targetbuild settings 里面找到 Other Linker Flags，添加-ObjC和 -all_load。注：有的时候需要加上-lstdc++&lt;/p&gt;
 &lt;p&gt;3.配置静态库的头文件。在SuperProject的targetbuild settings，找到Header Search Paths,添加”$(TARGET_BUILD_DIR)/usr/local/lib/include”和”$(OBJROOT)/UninstalledProducts/include”。第一个的意思是在build的时候会把头文件引用，第二个是在Archive项目时才去找的目录。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.38.33.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;工程例子：&lt;a href=&quot;https://github.com/iDayLily/SuperProject&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;主要引用：&lt;br&gt;&lt;a href=&quot;http://www.blog.montgomerie.net/easy-xcode-static-library-subprojects-and-submodules&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github&lt;/a&gt;&lt;br&gt;其他资料：&lt;br&gt;&lt;a href=&quot;http://stackoverflow.com/questions/5543854/xcode-4-cant-locate-public-header-files-from-static-library-dependency/9509786#9509786&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;stackoverflow&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://stackoverflow.com/questions/5584317/compile-build-or-archive-problems-with-xcode-4-and-dependencies&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;工程例子：&lt;a href=&quot;https://github.com/iDayLily/SuperProject&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;主要引用：&lt;br&gt;&lt;a href=&quot;http://www.blog.montgomerie.net/easy-xcode-static-library-subprojects-and-submodules&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;链接&lt;/a&gt;&lt;br&gt;其他资料：&lt;br&gt;&lt;a href=&quot;http://stackoverflow.com/questions/5543854/xcode-4-cant-locate-public-header-files-from-static-library-dependency/9509786#9509786&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;stackoverflow&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://stackoverflow.com/questions/5584317/compile-build-or-archive-problems-with-xcode-4-and-dependencies&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">

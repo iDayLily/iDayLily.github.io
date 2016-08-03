@@ -103,7 +103,7 @@
 <meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.09.58.png">
 <meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.23.28.png">
 <meta property="og:image" content="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.38.33.png">
-<meta property="og:updated_time" content="2016-08-03T16:34:11.000Z">
+<meta property="og:updated_time" content="2016-08-03T16:36:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Xcode引用子项目作为静态库">
 <meta name="twitter:description" content="在项目中引用另外一个项目做依赖">
@@ -349,8 +349,8 @@
 <p>2.在SuperProject的targetbuild settings 里面找到 Other Linker Flags，添加-ObjC和 -all_load。注：有的时候需要加上-lstdc++</p>
 <p>3.配置静态库的头文件。在SuperProject的targetbuild settings，找到Header Search Paths,添加”$(TARGET_BUILD_DIR)/usr/local/lib/include”和”$(OBJROOT)/UninstalledProducts/include”。第一个的意思是在build的时候会把头文件引用，第二个是在Archive项目时才去找的目录。</p>
 <p><img src="http://obbtc8znw.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-08-03%2022.38.33.png" alt=""></p>
-<p>工程例子：<a href="https://github.com/iDayLily/SuperProject" target="_blank" rel="external"></a></p>
-<p>主要引用：<br><a href="http://www.blog.montgomerie.net/easy-xcode-static-library-subprojects-and-submodules" target="_blank" rel="external">github</a><br>其他资料：<br><a href="http://stackoverflow.com/questions/5543854/xcode-4-cant-locate-public-header-files-from-static-library-dependency/9509786#9509786" target="_blank" rel="external">stackoverflow</a><br><a href="http://stackoverflow.com/questions/5584317/compile-build-or-archive-problems-with-xcode-4-and-dependencies" target="_blank" rel="external">stackoverflow</a></p>
+<p>工程例子：<a href="https://github.com/iDayLily/SuperProject" target="_blank" rel="external">github</a></p>
+<p>主要引用：<br><a href="http://www.blog.montgomerie.net/easy-xcode-static-library-subprojects-and-submodules" target="_blank" rel="external">链接</a><br>其他资料：<br><a href="http://stackoverflow.com/questions/5543854/xcode-4-cant-locate-public-header-files-from-static-library-dependency/9509786#9509786" target="_blank" rel="external">stackoverflow</a><br><a href="http://stackoverflow.com/questions/5584317/compile-build-or-archive-problems-with-xcode-4-and-dependencies" target="_blank" rel="external">stackoverflow</a></p>
 
       
     </div>
