@@ -87,13 +87,14 @@
 
 
 <meta name="description" content="objectt-c|ios">
-<meta property="og:type" content="website">
-<meta property="og:title" content="iDayLily's Blog">
-<meta property="og:url" content="http://blog.iDayLily.me/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="多层控制器的嵌套">
+<meta property="og:url" content="http://blog.iDayLily.me/2016/08/05/多层控制器的嵌套/index.html">
 <meta property="og:site_name" content="iDayLily's Blog">
 <meta property="og:description" content="objectt-c|ios">
+<meta property="og:updated_time" content="2016-08-05T08:14:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iDayLily's Blog">
+<meta name="twitter:title" content="多层控制器的嵌套">
 <meta name="twitter:description" content="objectt-c|ios">
 
 
@@ -112,7 +113,7 @@
   };
 </script>
 
-  <title> iDayLily's Blog </title>
+  <title> 多层控制器的嵌套 | iDayLily's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -133,9 +134,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -242,9 +241,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -264,141 +263,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/08/05/hexo+github记录/" itemprop="url">
-                  部署hexo+github
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-05T16:14:12+08:00" content="2016-08-05">
-              2016-08-05
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/05/hexo+github记录/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/05/hexo+github记录/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>记录一下部署hexo＋github所遇到的问题</p>
-<h2 id="Process-failed-layout-DS-Store"><a href="#Process-failed-layout-DS-Store" class="headerlink" title="# Process failed: layout/.DS_Store"></a># Process failed: layout/.DS_Store</h2><p>  进入主题目录layout等相应目录下执行<br>rm -rf .DS_Store</p>
-<hr>
-<h3 id="设置博客访问地址为xxx-xxx-xx"><a href="#设置博客访问地址为xxx-xxx-xx" class="headerlink" title="# 设置博客访问地址为xxx.xxx.xx"></a># 设置博客访问地址为xxx.xxx.xx</h3><p>  如果不想设置博客访问地址为www.xxx.xx或者xxx.xx,<br>想要设置成blog.xxx.xx为访问地址。在CNAME文件中的域名为blog.xxx.xx，然后在在DNS解析的地方，（以dnspod为例）设置一下CNAME转发，主机纪录为blog，记录类型为CNAME，记录值为usename.github.io。</p>
-<hr>
-<h3 id="博客预览没有任何内容，也就是白板"><a href="#博客预览没有任何内容，也就是白板" class="headerlink" title="# 博客预览没有任何内容，也就是白板"></a># 博客预览没有任何内容，也就是白板</h3><p>  可能是主题的目录不在站点目录下的theme的文件夹内</p>
-<hr>
-<h3 id="hexo-init-时提示缺少dependency"><a href="#hexo-init-时提示缺少dependency" class="headerlink" title="# hexo init 时提示缺少dependency"></a># hexo init 时提示缺少dependency</h3><p>执行一下 npm install</p>
-<hr>
-<p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/05/hexo+github记录/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/05/多层控制器的嵌套/" itemprop="url">
-                  多层控制器的嵌套
-                </a>
+                多层控制器的嵌套
               
             
           </h1>
@@ -446,18 +311,19 @@
 
       
         
-          
-            
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -465,122 +331,36 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/08/03/xcode引用子项目作为静态库/" rel="next" title="Xcode引用子项目作为静态库">
+                <i class="fa fa-chevron-left"></i> Xcode引用子项目作为静态库
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/08/03/xcode引用子项目作为静态库/" itemprop="url">
-                  Xcode引用子项目作为静态库
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-03T16:40:10+08:00" content="2016-08-03">
-              2016-08-03
-            </time>
-          </span>
-
-          
-
-          
+              <a href="/2016/08/05/hexo+github记录/" rel="prev" title="部署hexo+github">
+                部署hexo+github <i class="fa fa-chevron-right"></i>
+              </a>
             
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/03/xcode引用子项目作为静态库/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/03/xcode引用子项目作为静态库/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          在项目中引用另外一个项目做依赖
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/03/xcode引用子项目作为静态库/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -588,6 +368,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/08/05/多层控制器的嵌套/"
+           data-title="多层控制器的嵌套" data-url="http://blog.iDayLily.me/2016/08/05/多层控制器的嵌套/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -607,8 +395,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -665,6 +462,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -761,6 +569,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
