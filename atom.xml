@@ -19,7 +19,7 @@
     <title>部署hexo+github</title>
     <link href="http://blog.iDayLily.me/2016/08/05/hexo+github%E8%AE%B0%E5%BD%95/"/>
     <id>http://blog.iDayLily.me/2016/08/05/hexo+github记录/</id>
-    <published>2016-08-05T09:06:31.412Z</published>
+    <published>2016-08-05T09:07:41.071Z</published>
     <updated>2016-05-20T17:29:35.000Z</updated>
     
     <content type="html">&lt;p&gt;记录一下部署hexo＋github所遇到的问题&lt;/p&gt;
@@ -53,22 +53,6 @@
     
     
       <category term="hexo" scheme="http://blog.iDayLily.me/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>多层控制器的嵌套</title>
-    <link href="http://blog.iDayLily.me/2016/08/05/%E5%A4%9A%E5%B1%82%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84%E5%B5%8C%E5%A5%97/"/>
-    <id>http://blog.iDayLily.me/2016/08/05/多层控制器的嵌套/</id>
-    <published>2016-08-05T08:14:02.000Z</published>
-    <updated>2016-08-05T08:14:02.000Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   
